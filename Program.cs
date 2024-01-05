@@ -19,10 +19,9 @@ class Program {
             
             MatchCollection match = appChecker.Matches(folderName);
             if (match.Count() < 1) continue;
-            
-            string[] n = folderName.Split("-")[1].Split(".");
-            string versionString = n[0].ToString() + n[1].ToString() + "." + n[2].ToString();
-            double.TryParse(versionString, out double version);
+             
+            double.TryParse(string.Join("", folderName.Split("-")[1].Split(".")), out double version);
+            Console.WriteLine(version);
             versions.Add(version, file);
         }
         return versions[versions.Keys.Max()];
