@@ -29,7 +29,7 @@ jobs:
     - name: Make directory for Release
       run: mkdir release
     - name: Move release to dir
-      run: mv bin/Debug/win-x86/publish/discord_cleaner.exe release
+      run: mv /home/runner/work/discord_cleaner/discord_cleaner/bin/Debug/net6.0/win-x86/publish/discord_cleaner.exe release
     - name: Publish
       uses: actions/upload-artifact@v2
       with:
