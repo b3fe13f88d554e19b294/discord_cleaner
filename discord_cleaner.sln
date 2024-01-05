@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "discord_cleaner", "discord_cleaner.csproj", "{1CB1913A-2D2B-4856-81F9-3981DAE95091}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CB1913A-2D2B-4856-81F9-3981DAE95091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CB1913A-2D2B-4856-81F9-3981DAE95091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CB1913A-2D2B-4856-81F9-3981DAE95091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CB1913A-2D2B-4856-81F9-3981DAE95091}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2D69438-08BF-49E4-B384-F036080DA3A0}
+	EndGlobalSection
+EndGlobal
