@@ -11,9 +11,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
@@ -26,5 +24,14 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
-    - name: Release
+    - name: Build Trimmed
       run: dotnet publish
+    - name: Make directory for Release
+      run: mkdir release
+    - name: Move release to dir
+      run: mv bin/Debug/win-x86/publish/discord_cleaner.exe release
+    - name: Publish
+      uses: actions/upload-artifact@v2
+      with:
+        name: Binary
+        path: release
