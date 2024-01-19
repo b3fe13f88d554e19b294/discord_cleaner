@@ -21,7 +21,6 @@ class Program {
             if (match.Count() < 1) continue;
              
             double.TryParse(string.Join("", folderName.Split("-")[1].Split(".")), out double version);
-            Console.WriteLine(version);
             versions.Add(version, file);
         }
         return versions[versions.Keys.Max()];
@@ -34,7 +33,19 @@ class Program {
         string vers = getLatestVersion(path);
         if(vers.Length == 0) return;
 
-        string jsPath = Path.Combine(Directory.GetDirectories(Path.Combine(vers, "modules"), "discord_desktop_core-*")[0], "discord_desktop_core", "index.js");
+        string[] directories = Directory.GetDirectories(Path.Combine(vers, "modules"), "discord_desktop_core-*");
+        
+        string highest = directories[0];
+        int oldNumber = 0;  
+        foreach (var dir in directories) {
+            int.TryParse(Path.GetFileName(dir).Split("-")[1], out int number);
+            if (number > oldNumber) {
+                highest = dir;
+                oldNumber = number;
+            }
+        }
+
+        string jsPath = Path.Combine(highest, "discord_desktop_core", "index.js");
         string finalString = File.ReadAllText(jsPath);
         
         if (File.ReadLines(jsPath).Count() > 1) {
