@@ -10,7 +10,7 @@
     <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
     <RuntimeIdentifier>win-x86</RuntimeIdentifier>
 
-    <ApplicationManifest>core.manifest</ApplicationManifest>
+    <ApplicationManifest>discord_cleaner.manifest</ApplicationManifest>
   </PropertyGroup>
 
   <ItemGroup>
