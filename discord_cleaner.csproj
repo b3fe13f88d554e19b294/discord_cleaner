@@ -3,12 +3,18 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
 
-    <OutputType>Winexe</OutputType>
+    <OutputType>Exe</OutputType>
     <PublishSingleFile>true</PublishSingleFile>
     <SelfContained>true</SelfContained>
     <PublishTrimmed>true</PublishTrimmed>
     <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
     <RuntimeIdentifier>win-x86</RuntimeIdentifier>
+
+    <ApplicationManifest>core.manifest</ApplicationManifest>
   </PropertyGroup>
+
+  <ItemGroup>
+        <PackageReference Include="TaskScheduler" Version="2.10.1" />
+  </ItemGroup>
 
 </Project>
